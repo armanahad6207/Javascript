@@ -14,7 +14,7 @@ else if(uname=="john"){
     console.log(`hi ${uname} you are admin`);
 }
 else{
-    console.log(`hi ${uname} is anknown`);
+    console.log(`hi ${uname} is unknown`);
 }
 
 // ternary operator (single line if else)
