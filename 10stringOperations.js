@@ -40,4 +40,73 @@ console.log(city.at(-9))//B
  console.log(a.slice(2));//"mstrongNumber"
  console.log(typeof(a.slice(2)));//string
 
+ console.log(a.slice(4));//trongNumber
+ console.log(a.slice(2,6))//mstr => lastindex-excluded
+
+ console.log(a.slice(-2,2));//""
+ console.log(a.slice(-2,-7));//""
+
+
+ console.log(a.slice(-7,-2));//gNumb
+
+ var a="wakaanda"
+ a.charAt(0).toUpperCase();//A
+
+ var z=a.charAt(0).toUpperCase()+a.slice(1).toLowerCase()
+ console.log(z)//Wakaanda
+
+ //trim()
+
+ var uname=" arman ahad "
+ console.log(uname.length)//12
+console.log(uname);//" arman ahad "
+ uname=uname.trim();
+ console.log(uname);//"arman ahad"
+
+ 
+ // repalce()
+
+ var a="i am learning javacript"
+ a=a.replace("i am", "he is")
+//  console.log();
+ console.log(a);// he is learning javacript
+
+ console.log(a.replace("iam","sheis"));//he is learning javacript
+
+ console.log(a.replace(/javacript/g,"js"));//he is learning js
+
+
+ //replaceAll(patern,replacement)
+
+ const obj="this is my car"
+
+ console.log(obj.replaceAll("i","I"));//thIs Is my car
+
+ const string="hello everyone Hi hi";
+ let patern="hi"
+ let replacement="hey";
+ let new_string=string.replaceAll(patern,replacement);
+ console.log(new_string);//hello everyone Hi hey
+ console.log(string);//hello everyone Hi hi
+
+
+ //split()
+
+ var z="hello everyone how are you";
+ z=z.split(" ");
+ console.log(z);//[ 'hello', 'everyone', 'how', 'are', 'you' ]
+console.log(typeof(z));//object
+console.log(z.at(0));//helo
+
+console.log(z.toString());//hello,everyone,how,are,you
+
+console.log(z.toString().replaceAll(","," "));//hello everyone how are you
+
+  
+
+
+
+ 
+
+
 
