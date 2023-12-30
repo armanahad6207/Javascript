@@ -117,8 +117,77 @@ console.log(city.slice(1,6))//[ 'Mumbai', 'Helsinki', 'London', 'Amsterdam', 'Bo
  //splice
  //splice(startIndex, deleteCount,values);
  
+ var city = [
+  "Delhi",
+  "Mumbai",
+  "Helsinki",
+  "London",
+  "Amsterdam",
+  "Boston",
+  "Venice",
+];
+//['Delhi', 'Mumbai', 'Helsinki', 'London', 'Amsterdam', 'Boston', 'Venice']
+//    0       1           2         3           4          5           6
+
+console.log(city.splice(1,2,"wakanda"));//[ 'Mumbai', 'Helsinki' ]return deleted elementc
+
+console.log(city);
+//[ 'Delhi', 'wakanda', 'London', 'Amsterdam', 'Boston', 'Venice' ] 
 
 
+city.splice(0,5);
+console.log(city);
+// [ 'Venice' ]
 
+city.splice(0,0,'Delhi', 'wakanda', 'London', 'Amsterdam', 'Boston', 'Venice' )
+
+console.log(city);
+[
+  'Delhi',
+  'wakanda',
+  'London',
+  'Amsterdam',
+  'Boston',
+  'Venice',
+  'Venice'
+]
+
+//indexOf()
+
+console.log(city.indexOf("London"));//2
+
+
+console.log(city.indexOf("Ranchi"))//-1
+
+var x=["a","b","c",1];
+var y=[2,"e","r","t"];
+
+console.log(x+y);//a,b,c,12,e,r,t
+
+// ["a", "b", "c", 1] + [2, "d", "e", "f"];
+
+var name="arman"
+var students=["arman","anil","adi"];
+
+console.log(Array.isArray(name));// false
+
+console.log(Array.isArray(students));//true
+
+var city = [
+  "Dubai",
+  "Innsburg",
+  "France",
+  ["Red", [1, 2, 3], "Yellow", "Orange"],
+  "London",
+  "Pune",
+];
+
+console.log(city[3])//[ 'Red', [ 1, 2, 3 ], 'Yellow', 'Orange' ]
+
+console.log(city[3][0]);//Red
+
+console.log(city[3][1]);//[ 1, 2, 3 ]
+
+console.log(city[3][1][2])//3
 
 
