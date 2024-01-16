@@ -6,3 +6,4 @@ cont.addEventListener("mousemove",function(dets){
    cursor.style.top=dets.y+"px";
 
 });
+
