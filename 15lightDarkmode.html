@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>backgroundtheme</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            position: relative;
+            transition: background-color ease .5s;
+            
+        }
+        .container h1{
+            font-size: 15vw;
+            font-family: sans-serif;
+        }
+       
+        .btn {
+  height: 3%;
+  width: 5%;
+  border: 3px solid black;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  border-radius: 20px;
+  transition: right .5s ease;
+}
+
+.btn_slider {
+  height: 160%;
+  width: 30%;
+  border: 1px solid rgb(33, 33, 33);
+  position: absolute;
+  bottom: -30%;
+  right: 68%;
+  background-color: #908f8f;
+  border-radius: 10px;
+  border: none;
+  transition: right .5s ease; 
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="btn">
+            <div class="btn_slider">
+
+            </div>
+        </div>
+        <h1 class="title">ArmanAhad</h1>
+    </div>
+    <script>
+       let btn= document.querySelector(".btn")
+       let slide_btn=document.querySelector(".btn_slider")
+       let frame=document.querySelector(".container")
+        flag=true;
+       btn.addEventListener("click",function(){
+            if(flag){
+                slide_btn.style.right="3%";
+                frame.style.backgroundColor="#333333";
+                document.querySelector(".title").style.color="#fff"
+                slide_btn.style.backgroundColor="#fff"
+                btn.style.borderColor="#fff";
+                flag=false;
+            }
+            else{
+                slide_btn.style.right="68%";
+                frame.style.backgroundColor="#fff";
+                document.querySelector(".title").style.color="#000"
+                slide_btn.style.backgroundColor="#000"
+                btn.style.borderColor="#000";
+                flag=true;
+            }
+            
+                
+       });
+
+    </script>
+</body>
+</html>
