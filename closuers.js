@@ -21,7 +21,7 @@ let price=1000;
 function getPrice(){
 // console.log(`old price ${price}`) old price display un defined
     let price=200;
-    console.log(`new price ${price}`) // 200
+    console.log(`new price ${price}`) // 200 
    
 };
 
