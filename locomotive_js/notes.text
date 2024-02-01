@@ -1,0 +1,17 @@
+locomotive js => javascript library provide smooth scrolling for user experience.
+
+for that we have to write locomotive js and css cdn
+
+we copy the code from locomotive-github
+
+const scroll=new LocomotiveScroll({
+   el:document.querySelector("[data-scroll-container]"),
+   smooth:true,
+})
+
+
+:: data-scroll-container =>Defines the scroll container.
+
+:: data-scroll-speed =>Element parallax speed. A negative value will reverse the direction.
+
+::data-scroll-direction =>Element's parallax direction. vertical or horizontal
