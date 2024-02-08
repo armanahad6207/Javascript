@@ -24,6 +24,13 @@ var b= a.map((item) => {
 });
 console.log(b);//[ '<p>4</p>', '<p>8</p>', '<p>5</p>', '<p>23</p>' ]
 
+// double 
+function double(x){
+  return x*2
+}
+const output=a.map(double);
+console.log(`double = ${output}`)
+
 
 //filter
 //it is used to filter out the value
@@ -53,3 +60,30 @@ console.log(`dbl of an array =  ${dbl}`);
 
 
 //a.map( () => {} )
+
+var list=[
+
+  {firstName:"arman",lastName:"ahad",age:23},
+  {firstName:"anil",lastName:"kumar",age:60},
+  {firstName:"aditya",lastName:"singh",age:34},
+  {firstName:"rajkumar",lastName:"rao",age:23}
+]
+
+// [arman ahad,anil kumar,aditya singh,rajkumar rao] 
+
+const result=list.map(x=>{
+  return x.firstName+" "+x.lastName;
+});
+console.log(result);
+
+// show the first name whose age is less than 30
+
+const firstName=list.filter(function (x){
+  if(x.age<30){
+    return x;
+  }
+}).map(x=> x.firstName);
+console.log(`age less than 30 ${firstName}`);
+// age less than 30 arman,rajkumar
+
+// reduces
