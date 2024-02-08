@@ -86,4 +86,4 @@ const firstName=list.filter(function (x){
 console.log(`age less than 30 ${firstName}`);
 // age less than 30 arman,rajkumar
 
-// reduces
+
