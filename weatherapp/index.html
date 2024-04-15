@@ -21,14 +21,15 @@
       >
         geolocation
       </button>
-      <p id="out"></p>
-      <p id="weather"></p>
+      <p id="out" class="text-center text-red-500"></p>
+      <p id="weather" class="text-center text-red-500"></p>
       <p id="location" class="text-center text-red-500"></p>
     </div>
 
     <script>
       let output = document.querySelector("#out");
       let locat = document.querySelector("#location");
+      let weath = document.querySelector("#weather");
       function geolocation() {
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(showPosition);
@@ -40,8 +41,16 @@
       function showPosition(det) {
         let lat = det.coords.latitude;
         let long = det.coords.longitude;
-        locat.innerText = `latitude is ${lat} and logitude is ${long}`;
-        const url = `https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={long}}&appid=11a321ba54f0e85d9fae9c6958623600`;
+        out.innerText = `latitude is ${lat} and logitude is ${long}`;
+        const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=11a321ba54f0e85d9fae9c6958623600`;
+        //api calling
+        fetch(url, { method: "GET" })
+          //return promise
+          .then((data) => data.json())
+          .then((res) => {
+            weath.innerText = `temp of the day is ${res.main.temp}`;
+            locat.innerText = ` cityname is ${res.name} `;
+          });
       }
     </script>
   </body>
