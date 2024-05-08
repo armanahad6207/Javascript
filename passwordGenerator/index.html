@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Generate Password</h1>
+      <div class="passbox">
+        <input type="text" id="password" />
+      </div>
+      <input type="range" min="4" max="30" value="6" id="rangetarget" />
+      <div class="row">
+        <p>password generate</p>
+        <span id="rangeslider"></span>
+      </div>
+      <div class="row">
+        <label for="lowercase"> Include (a-z) </label>
+        <input type="checkbox" id="lowercase" />
+      </div>
+      <div class="row">
+        <label for="uppercase"> Include (A-Z) </label>
+        <input type="checkbox" id="uppercase" />
+      </div>
+      <div class="row">
+        <label for="numbers"> Include (0-9) </label>
+        <input type="checkbox" id="numbers" />
+      </div>
+      <div class="row">
+        <label for="symbols"> Include (#$%*) </label>
+        <input type="checkbox" id="symbols" />
+      </div>
+      <button id="passwordbtn">Generate Password</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
